@@ -1,0 +1,9 @@
+# Ignore Notepad++ backup files
+*.txt.bak
+
+# Ignore all .bak files (optional)
+*.bak
+
+# Ignore temporary files
+*.log
+*.tmp
