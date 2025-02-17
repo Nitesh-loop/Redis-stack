@@ -1,5 +1,8 @@
 Doc Link: https://redis.io/learn/howtos/moviesdatabase/create
 
+Redis is volatile by default, meaning data is stored in memory (RAM) and can be lost if Redis is restarted or the system crashes. 
+However, Redis provides persistence options to make it non-volatile.
+
 # Create Index in redis:-> Before creating the index let's describe the dataset and insert entries.
 
 # Sample Dataset: movies
