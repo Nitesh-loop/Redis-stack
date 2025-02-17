@@ -1,0 +1,22 @@
+## Instalaltion of Redis on RedHat 8
+
+sudo yum install redis
+
+sudo systemctl enable redis
+
+sudo systemctl start redis
+
+redis-cli
+
+ping
+
+> pong
+
+
+
+# Configuration file:
+sudo vim /etc/redis.conf
+
+
+# Configuring Redis:
+

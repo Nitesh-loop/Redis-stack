@@ -1,0 +1,37 @@
+## Instalaltion of Redis on RedHat 8
+
+sudo yum install redis
+
+sudo systemctl enable redis
+
+sudo systemctl start redis
+
+redis-cli
+
+ping
+
+> pong
+
+# Configuration file:
+sudo vim /etc/redis.conf
+
+
+# Basic Redis Commands:
+1. Storing a Key-Value Pair
+SET name "Nitesh"
+
+2. Retrieving a Value
+GET name
+
+3. Checking if a Key Exists
+EXISTS name
+
+1   # (1 means key exists, 0 means it doesn't)
+
+
+5. Incrementing & Decrementing Values
+SET count 10
+INCR count   # Increments count by 1 (output: 11)
+DECR count   # Decrements count by 1 (output: 10)
+
+

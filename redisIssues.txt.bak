@@ -1,0 +1,36 @@
+# redis issue:
+
+
+[oracle@disaster ~]$ sudo systemctl status redis
+[sudo] password for oracle:
+Unit redis.service could not be found.
+
+[oracle@disaster ~]$ redis-server --version
+Redis server v=7.4.2 sha=a0a6f23d:0 malloc=jemalloc-5.3.0 bits=64 build=9d1663b2761cc6bb
+
+[oracle@disaster ~]$ sudo systemctl start redis
+Failed to start redis.service: Unit redis.service not found.
+[oracle@disaster ~]$ redis-cli
+127.0.0.1:6379>
+
+
+systemctl status redis-stack-server.service
+
+
+1. Find Redis Binary and Config File Paths:
+which redis-server					/usr/bin/redis-server
+which redis-cli						/usr/bin/redis-cli
+which redis-stack-server			/bin/redis-stack-server
+
+This confirms that Redis is installed manually in /usr/bin
+
+
+
+# Now, find the Redis configuration file:
+
+
+find . -name "redis-stack.conf" -ls				
+  
+[root@disaster /]# find -name "redis-stack.conf" -ls
+201841001      4 -rw-r-----   1  nobody   nobody        364 Feb 10 14:30 ./etc/redis-stack.conf
+136511491      4 -rw-r--r--   1  nobody   nobody         23 Feb 10 14:28 ./opt/redis-stack/etc/redis-stack.conf

@@ -1,0 +1,49 @@
+[oracle@disaster ~]$ curl -s https://packagecloud.io/install/repositories/pigsty/redis/script.rpm.sh | sudo bash
+[sudo] password for oracle:
+Detected operating system as rhel/8.
+Checking for curl...
+Detected curl...
+Downloading repository file: https://packagecloud.io/install/repositories/pigsty/redis/config_file.repo?os=rhel&dist=8&source=script
+done.
+Installing yum-utils...
+Updating Subscription Management repositories.
+pigsty_redis-source                                                                                                         183  B/s | 833  B     00:04
+pigsty_redis-source                                                                                                         1.7 kB/s | 3.9 kB     00:02
+Importing GPG key 0x87A41B37:
+ Userid     : "https://packagecloud.io/pigsty/redis (https://packagecloud.io/docs#gpg_signing) <support@packagecloud.io>"
+ Fingerprint: 05B0 DD28 E037 7E1D 498A 0C06 814F 5170 87A4 1B37
+ From       : https://packagecloud.io/pigsty/redis/gpgkey
+pigsty_redis-source                                                                                                          44  B/s | 296  B     00:06
+Dependencies resolved.
+============================================================================================================================================================
+ Package                         Architecture                 Version                             Repository                                           Size
+============================================================================================================================================================
+Installing:
+ yum-utils                       noarch                       4.0.21-25.el8                       rhel-8-for-x86_64-baseos-rpms                        76 k
+
+Transaction Summary
+============================================================================================================================================================
+Install  1 Package
+
+Total download size: 76 k
+Installed size: 23 k
+Downloading Packages:
+yum-utils-4.0.21-25.el8.noarch.rpm                                                                                          149 kB/s |  76 kB     00:00
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+Total                                                                                                                       148 kB/s |  76 kB     00:00
+Running transaction check
+Transaction check succeeded.
+Running transaction test
+Transaction test succeeded.
+Running transaction
+  Preparing        :                                                                                                                                    1/1
+  Installing       : yum-utils-4.0.21-25.el8.noarch                                                                                                     1/1
+  Running scriptlet: yum-utils-4.0.21-25.el8.noarch                                                                                                     1/1
+  Verifying        : yum-utils-4.0.21-25.el8.noarch                                                                                                     1/1
+Installed products updated.
+
+Installed:
+  yum-utils-4.0.21-25.el8.noarch
+
+Complete!
+Generating yum cache for pigsty_redis...

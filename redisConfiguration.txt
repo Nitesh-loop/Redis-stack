@@ -1,0 +1,45 @@
+## Instalaltion of Redis on RedHat 8
+
+sudo yum install redis
+
+sudo systemctl enable redis
+
+sudo systemctl start redis
+
+redis-cli
+
+ping
+
+> pong
+
+
+
+# Configuration file:
+sudo vim /etc/redis.conf
+
+
+# Configuring Redis:
+To persist data and configure Redis, edit the Redis configuration file:
+
+find . -name "redis.conf" -ls
+
+sudo vim /etc/redis/redis.conf   
+
+
+-Enable persistence:
+
+Append-only file (AOF): appendonly yes
+Snapshotting: save 900 1 (saves every 900 sec if 1 change is made)
+
+- Change default port: 
+port 6380
+
+-Set password: 
+requirepass mysecretpassword
+
+-Restart Redis after changes:
+sudo systemctl restart redis
+
+
+# Exit Redis CLI
+exit

@@ -1,0 +1,44 @@
+# Basic Redis Commands:
+1. Storing a Key-Value Pair
+SET name "Nitesh"
+
+2. Retrieving a Value
+GET name
+
+3. Checking if a Key Exists
+EXISTS name
+
+1   # (1 means key exists, 0 means it doesn't)
+
+
+5. Incrementing & Decrementing Values
+SET count 10
+INCR count   # Increments count by 1 (output: 11)
+DECR count   # Decrements count by 1 (output: 10)
+
+6. Working with Lists
+LPUSH fruits "Apple" "Banana" "Cherry"   # Adds elements to the left
+RPUSH fruits "Mango"                     # Adds element to the right
+LRANGE fruits 0 -1                        # Fetches all elements
+LPOP fruits                               # Removes first element
+RPOP fruits                               # Removes last element
+
+7. Working with Sets
+SADD colors "Red" "Green" "Blue"
+SMEMBERS colors   # Shows all elements
+SISMEMBER colors "Red"  # Checks if "Red" is in the set (returns 1 if yes, 0 if no)
+SREM colors "Green"  # Removes "Green"
+
+
+8. Working with Hashes (Key-Value Dictionary)---> user ?
+HSET user name "John" age 30 city "Delhi"
+HGET user name        # Retrieves "John"
+HGETALL user         # Retrieves all fields and values
+HDEL user city       # Deletes "city" field
+
+
+
+9. Working with Expiry (TTL)
+SET session "active"
+EXPIRE session 10   # Expires in 10 seconds
+TTL session        # Checks remaining time
